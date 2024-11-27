@@ -9,7 +9,7 @@
 
 #### Dataset
 
-- [ ] Add datasets used to the `datasets/` folder
+- [ ] Add datasets used to the `datasets/` folder - Done
 
 #### Files
 
@@ -18,33 +18,38 @@
 
 #### Learning Objective
 
-*One measurable learning objective that this exercise assesses*
+Learners will create dropdown menus in Excel for the "Audio Equipment," "Computers," and "Outdoor" categories by referencing a predefined range of items in the worksheet.
 
 #### Context
 
-*3 - 4 sentence description of why it’s important to learn how to do this task (linking back to the learning objective). Explain how this would be used in a real-life situation. Why is it useful, what problem does it solve?*
+You are creating a system for managing product categories where dropdowns will reference a range of predefined items. This ensures dynamic updates if the source list changes.
 
 #### Steps to be executed by the student (max 6)
 
-*Each bulleted instruction is a complete sentence that describes a specific task.*
+Step 1: Open the provided "ex-1-intial.xlsx" file.
 
-- Step 1
-- Step 2
-- Step 3
-- ...
+Step 2: Highlight cells I2:I6 (under "Audio Equipment").
+Step 3: Go to the Data tab, select Data Validation, and choose the List option.
+Step 4: In the Source box, enter the range where "Audio Equipment" items are located, e.g., =$C$2:$C$6.
+Step 5: Repeat steps 3 and 4 for Computers & Outdoors Subcategory.
+Step 6: Save your changes.
 
 #### Exercise question:
-*This is a question presented to learners to check if the steps above were properly completed. It can be a multiple choice question or a question with a 1-3 word answer. It is often not possible to check if all the steps are completed, in this case; the priority is to check that the learner meets the learning objective.*
+Question:
+What happens if you add a new item to the "Audio Equipment" list in cell C7?
+
+Correct Answer:
+The dropdown will not include the new item unless the range is updated to include the additional row.
 
 #### End goal:
 
-*Add an image of the final visualization here.*
+![image](https://github.com/user-attachments/assets/241a7cc8-196a-4408-8f7f-af234e1d3845)
 
 ## 2nd VM Exercise
 
 #### Dataset
 
-- [ ] Add datasets used to the `datasets/` folder
+- [ ] Add datasets used to the `datasets/` folder - Done/Same Dataset
 
 #### Files
 
@@ -53,25 +58,33 @@
 
 #### Learning Objective
 
-*One measurable learning objective that this exercise assesses*
+Learners will create dependent dropdown menus using the INDIRECT formula to dynamically display items based on a parent category.
 
 #### Context
 
-*3 - 4 sentence description of why it’s important to learn how to do this task (linking back to the learning objective). Explain how this would be used in a real-life situation. Why is it useful, what problem does it solve?*
+You are designing an inventory form for your store. Users will first select a main category (e.g., Furniture, Clothing, Kitchen), and based on their selection, a second dropdown will show relevant subcategories.
 
 #### Steps to be executed by the student (max 6)
 
-*Each bulleted instruction is a complete sentence that describes a specific task.*
-
-- Step 1
-- Step 2
-- Step 3
-- ...
+Step 1: Open the provided "ex-2-intial.xlsx" file.
+Step 2: Define the named ranges for all the categories given on the "Category Details" sheet: Example:
+B2:B5 as "Furniture"
+C2:C5 as "Clothing"
+D2:D5 as "Kitchen"
+Step 3: In cell H1, create a dropdown for the categories: Furniture, Clothing, Kitchen using Data Validation.
+Step 4: In cell I1, create a dependent dropdown using the formula: =INDIRECT(H1). Repeat the same for others.
+Step 5: Test your dropdowns: Select an item in H2. Ensure that the dependent dropdown in I2 shows the correct subcategories. 
+Step 6: Save your changes.
 
 #### Exercise question:
-*This is a question presented to learners to check if the steps above were properly completed. It can be a multiple choice question or a question with a 1-3 word answer. It is often not possible to check if all the steps are completed, in this case; the priority is to check that the learner meets the learning objective.*
+Question:
+What happens in cell I1 if the category in cell H1 is cleared?
+
+Correct Answer:
+The dependent dropdown in I1 will remain empty.
 
 #### End goal:
 
-*Add an image of the final visualization here.*
+![image](https://github.com/user-attachments/assets/05bb043b-5f9c-4697-adb4-83caadb66433)
+
 
